@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Pesanan Saya</title>
+</head>
+
+<body>
+
+<center>
+
+```
+<h1>Pesanan Anda</h1>
+
+<div id="pesanan"></div>
+
+<br>
+
+<button onclick="confirmPesanan()">Confirm</button>
+
+<h2 id="status"></h2>
+```
+
+</center>
+
+<script>
+
+    // Mengambil data dari URL
+    let data = new URLSearchParams(window.location.search);
+
+    let jumlah1 = data.get("jumlah1");
+    let jumlah2 = data.get("jumlah2");
+    let jumlah3 = data.get("jumlah3");
+
+    let pedas1 = data.get("pedas1");
+    let pedas2 = data.get("pedas2");
+    let pedas3 = data.get("pedas3");
+
+
+    let hasil = "";
+
+    if (jumlah1 > 0) {
+        hasil += "<p>Makanan 1: " + jumlah1 + " porsi, " + pedas1 + "</p>";
+    }
+
+    if (jumlah2 > 0) {
+        hasil += "<p>Makanan 2: " + jumlah2 + " porsi, " + pedas2 + "</p>";
+    }
+
+    if (jumlah3 > 0) {
+        hasil += "<p>Makanan 3: " + jumlah3 + " porsi, " + pedas3 + "</p>";
+    }
+
+
+    if (hasil == "") {
+        hasil = "<p>Belum ada makanan yang dipilih.</p>";
+    }
+
+
+    document.getElementById("pesanan").innerHTML = hasil;
+
+
+    function confirmPesanan() {
+
+        document.getElementById("status").innerHTML =
+            "Makanan sedang diproses...";
+    }
+
+</script>
+
+</body>
+</html>

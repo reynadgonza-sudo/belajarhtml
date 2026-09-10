@@ -1,0 +1,117 @@
+
+/* Mengatur semua elemen */
+* {
+    box-sizing: border-box;
+}
+
+/* Mengatur halaman */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Mengatur judul utama */
+h1 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #e65100;
+}
+
+/* Mengatur subjudul */
+h2 {
+    color: #555;
+    margin-bottom: 35px;
+}
+
+/* Mengatur tempat semua makanan */
+form > div {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mengatur kartu makanan */
+form > div > div {
+    background-color: rgb(16, 145, 25);
+    width: 240px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+
+    /* Memberikan bayangan */
+    box-shadow: 0 4px 12px rgba(73, 17, 141, 0.12);
+
+    /* Membuat animasi lebih halus */
+    transition: 0.1s;
+}
+
+/* Efek ketika mouse berada di kartu makanan */
+form > div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(196, 4, 4, 0.84);
+}
+
+/* Mengatur gambar makanan */
+form img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Mengatur judul makanan */
+h3 {
+    margin: 15px 0;
+    color: #b71326;
+}
+
+/* Mengatur tulisan tambahan */
+h4 {
+    margin-bottom: 10px;
+}
+
+/* Mengatur pilihan jumlah makanan */
+select {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Mengatur radio button */
+input[type="radio"] {
+    margin: 8px 5px;
+    cursor: pointer;
+}
+
+/* Mengatur tulisan label */
+label {
+    cursor: pointer;
+}
+
+/* Mengatur tombol */
+button {
+    background-color: #e65100;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efek tombol ketika mouse diarahkan */
+button:hover {
+    background-color: #bf360c;
+    transform: scale(1.05);
+}
+
+/* Mengatur jarak tombol */
+form > center {
+    margin-top: 20px;
+}
